@@ -17,7 +17,6 @@ struct vertex {
     char value;
     string status;
     vector<vertex*> neighbors;
-    vertex* next;
 };
 
 class Graph {

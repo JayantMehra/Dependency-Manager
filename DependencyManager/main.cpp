@@ -15,19 +15,14 @@ int main(int argc, const char * argv[]) {
     
     vector<pair<char, char> > v;
     
-    v.push_back(make_pair('1', '2'));
-    v.push_back(make_pair('1', '3'));
-    v.push_back(make_pair('1', '5'));
+    v.push_back(make_pair('d', 'a'));
+    v.push_back(make_pair('b', 'f'));
+    v.push_back(make_pair('d', 'b'));
+    v.push_back(make_pair('a', 'f'));
+    v.push_back(make_pair('c', 'd'));
     
     Graph G(v);
     G.printAdjacencyList();
-    
-    vector<vertex*> x = G.verticesAdjacentTo('3');
-    
-    for (int i = 0; i < x.size(); i++)
-        cout << x[i]->value << " ";
-    cout << endl;
-    
     vector<char> order = G.orderOfExecution();
     
     for (int i = 0; i < order.size(); i++)
