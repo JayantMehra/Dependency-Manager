@@ -13,25 +13,26 @@
 #include <string>
 using namespace std;
 
-struct vertex {
-    char value;
-    string status;
-    vector<vertex*> neighbors;
-};
-
 class Graph {
 public:
     Graph(vector<pair<char, char> > vertexPairs);
     vector<char> orderOfExecution();
-    vector<vertex*> verticesAdjacentTo(char required_vertex);
     
     //  Development Only
     void printAdjacencyList();
     
 private:
-    void orderOfExecutionHelper(vector<char> &order, vertex* currentVertex);
     
+    struct vertex {
+        char value;
+        string status;
+        vector<vertex*> neighbors;
+    };
+    
+    void orderOfExecutionHelper(vector<char> &order, vertex* currentVertex);
+    vector<vertex*> verticesAdjacentTo(char required_vertex);
     vector<vertex* > adjacencyList;
+    
     int uniqueVertices;
     
 };

@@ -55,7 +55,7 @@ Graph::Graph(vector<pair<char, char> > vertexPairs) {
     }
 }
 
-vector<vertex*> Graph::verticesAdjacentTo(char required_vertex) {
+vector<Graph::vertex*> Graph::verticesAdjacentTo(char required_vertex) {
     
     vector<vertex*> temp;
     
